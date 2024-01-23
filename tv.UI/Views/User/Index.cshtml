@@ -1,0 +1,17 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Kullanıcı Listesi</h2>
+<table class="table table-responsive">
+    @foreach (var user in Model.Users)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Username</td>
+            <td>@user.Email</td>
+        </tr>
+    }
+</table>
+

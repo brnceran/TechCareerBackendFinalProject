@@ -1,0 +1,20 @@
+﻿@model AdvertViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+}
+
+<h2>İlan Listesi</h2>
+<table class="table table-responsive">
+    @foreach (var advert in Model.Adverts)
+    {
+        <tr>
+            <td>@advert.Id</td>
+            <td>@advert.Title</td>
+            <td>@advert.Description</td>
+            <td>@advert.CreateDate</td>
+            <td>@advert.CategoryId</td>
+        </tr>    
+    }
+</table>
+
